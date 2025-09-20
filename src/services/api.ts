@@ -2,19 +2,19 @@ import { Task, CreateTaskData, UpdateTaskData, DummyJSONResponse, ApiError } fro
 
 const API_BASE_URL = 'https://dummyjson.com';
 
-class ApiError extends Error {
+class CustomApiError extends Error {
   status?: number;
   
   constructor(message: string, status?: number) {
     super(message);
-    this.name = 'ApiError';
+    this.name = 'CustomApiError';
     this.status = status;
   }
 }
 
 async function handleResponse<T>(response: Response): Promise<T> {
   if (!response.ok) {
-    throw new ApiError(`API Error: ${response.statusText}`, response.status);
+    throw new CustomApiError(`API Error: ${response.statusText}`, response.status);
   }
   
   return response.json();
