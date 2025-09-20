@@ -22,7 +22,6 @@ export const SimpleTaskList: React.FC<SimpleTaskListProps> = ({
   onToggle,
   onEdit,
   onDelete,
-  onReorder,
 }) => {
   const { filteredTasks } = useFilteredTasks(tasks, filters);
 

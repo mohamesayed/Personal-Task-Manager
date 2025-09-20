@@ -9,7 +9,6 @@ import {
   DragEndEvent,
 } from '@dnd-kit/core';
 import {
-  arrayMove,
   SortableContext,
   sortableKeyboardCoordinates,
   verticalListSortingStrategy,
@@ -20,7 +19,6 @@ import {
 import { CSS } from '@dnd-kit/utilities';
 import { Task } from '../types';
 import { TaskItem } from './TaskItem';
-import { useFilteredTasks } from '../hooks/useTasks';
 
 interface TaskListProps {
   tasks: Task[];
