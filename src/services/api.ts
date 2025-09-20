@@ -1,4 +1,4 @@
-import { Task, CreateTaskData, UpdateTaskData, DummyJSONResponse, ApiError } from '../types';
+import { Task, CreateTaskData, UpdateTaskData, DummyJSONResponse } from '../types';
 
 const API_BASE_URL = 'https://dummyjson.com';
 
